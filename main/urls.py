@@ -1,9 +1,8 @@
 from django.urls import path
-from .views import aboutus, safe_asli_site, get_post,main
+from .views import aboutus, safe_asli_site, get_post
 
 urlpatterns = [
     path('', safe_asli_site , name = 'asli'),
     path('aboutus', aboutus, name = 'ab'),
     path('post/<int:id>', get_post),
-    path('main', main, name = 'main')
 ]

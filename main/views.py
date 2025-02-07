@@ -20,6 +20,3 @@ def aboutus(request):
 
 def get_post(request, id):
     return render(request, 'post_get.html', {'id': id})
-
-def main(request):
-    return render(request,'base/main_base.html')

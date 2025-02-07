@@ -1,13 +1,13 @@
-<html>
-<head>
-    
-</head>
-<body>
-<h1>
-    About us
-</h1>
-<a href="{% url 'asli' %}">
-    Home
-</a>
-</body>
-</html>
+{% extends 'base/main_base.html' %}
+{% block title %}
+{% endblock %}
+
+
+{% block main %}
+    <h1>
+        About us
+    </h1>
+    <a href="{% url 'asli' %}">
+        Home
+    </a>
+{% endblock %}
