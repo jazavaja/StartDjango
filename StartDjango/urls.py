@@ -21,5 +21,6 @@ from main.views import safe_asli_site, aboutus
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
-    path('user/', include('user.urls'))
+    path('user/', include('user.urls')),
+    path('person/', include('modellearn.urls'))
 ]
