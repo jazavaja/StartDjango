@@ -36,7 +36,8 @@ def create_person(request):
 
 
 def read_person(request):
-    persons = Person.objects.all()
+    persons = Person.objects.exclude(age__range=(18, 32)).order_by("-first_name")
+
     # personnnnn = Person.objects.get(mobile='09001002020')
     # print(personnnnn.first_name)
 

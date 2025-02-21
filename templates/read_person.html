@@ -17,6 +17,7 @@
             <th scope="col">First name</th>
             <th scope="col">Last name</th>
             <th scope="col">Email</th>
+            <th scope="col">age</th>
             <th scope="col">Delete</th>
             <th scope="col">Update</th>
         </tr>
@@ -29,10 +30,13 @@
                 <td>{{ person.first_name }}</td>
                 <td>{{ person.last_name }}</td>
                 <td>{{ person.email }}</td>
+                <td>{{ person.age }}</td>
                 <td>
                     <a class="btn btn-danger" href="{% url 'delete_person' id=person.id %}">
                         Delete
                     </a>
+                </td>
+                <td>
                     <a class="btn btn-success" href="{% url 'update_person' id=person.id %}">
                         Update
                     </a>

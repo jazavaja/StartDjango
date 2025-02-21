@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f75822f0-459d-46e6-a5ca-f8630c13cc18" name="Changes" comment="4-5 complete">
-      <change afterPath="$PROJECT_DIR$/templates/read_person.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/39c7c72b-c5bd-45ca-8d34-05e5914ec5b6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/39c7c72b-c5bd-45ca-8d34-05e5914ec5b6.xml" afterDir="false" />
+    <list default="true" id="f75822f0-459d-46e6-a5ca-f8630c13cc18" name="Changes" comment="4-6 complete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modellearn/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modellearn/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/modellearn/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modellearn/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/modellearn/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modellearn/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/modellearn/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/read_person.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/read_person.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +130,7 @@
       <workItem from="1739807655151" duration="19000" />
       <workItem from="1739904781040" duration="3950000" />
       <workItem from="1740058043514" duration="8660000" />
-      <workItem from="1740123974448" duration="11842000" />
+      <workItem from="1740123974448" duration="13945000" />
     </task>
     <task id="LOCAL-00001" summary="Added 1">
       <option name="closed" value="true" />
@@ -193,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740146712116</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="4-6 complete">
+      <option name="closed" value="true" />
+      <created>1740158263686</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1740158263686</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +219,7 @@
     <MESSAGE value="4-1 4-2 4-3 complete" />
     <MESSAGE value="4-4 complete" />
     <MESSAGE value="4-5 complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="4-5 complete" />
+    <MESSAGE value="4-6 complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="4-6 complete" />
   </component>
 </project>
