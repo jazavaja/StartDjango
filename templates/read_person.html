@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Table</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+<div class="container mt-5">
+    <h2 class="mb-4">Users List</h2>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First name</th>
+            <th scope="col">Last name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Delete</th>
+            <th scope="col">Update</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for person in persons %}
+
+            <tr>
+                <th scope="row">{{ person.id }}</th>
+                <td>{{ person.first_name }}</td>
+                <td>{{ person.last_name }}</td>
+                <td>{{ person.email }}</td>
+                <td>
+                    <a class="btn btn-danger" href="{% url 'delete_person' id=person.id %}">
+                        Delete
+                    </a>
+                    <a class="btn btn-success" href="{% url 'update_person' id=person.id %}">
+                        Update
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+
+</body>
+</html>

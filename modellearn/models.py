@@ -7,7 +7,7 @@ from django.contrib.auth.hashers import make_password
 class Person(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=50)
-    age = models.IntegerField()
+    age = models.IntegerField(default=18)
     email = models.EmailField(unique=True)
     username = models.CharField(unique=True, max_length=100)
     mobile = models.CharField(unique=True, max_length=13, null=True, blank=True)

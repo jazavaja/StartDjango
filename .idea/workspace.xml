@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f75822f0-459d-46e6-a5ca-f8630c13cc18" name="Changes" comment="4-5 complete">
+      <change afterPath="$PROJECT_DIR$/templates/read_person.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/39c7c72b-c5bd-45ca-8d34-05e5914ec5b6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/39c7c72b-c5bd-45ca-8d34-05e5914ec5b6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modellearn/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modellearn/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/modellearn/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modellearn/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/modellearn/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modellearn/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/modellearn/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,34 +45,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Django Server.StartDjango.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Javad/PycharmProjects/StartDjango/static&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.StartDjango.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "django.template.preview.state": "SHOW_EDITOR",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Javad/PycharmProjects/StartDjango/modellearn/migrations",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlite&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Javad\PycharmProjects\StartDjango\modellearn\migrations" />
       <recent name="C:\Users\Javad\PycharmProjects\StartDjango\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -128,7 +135,7 @@
       <workItem from="1739807655151" duration="19000" />
       <workItem from="1739904781040" duration="3950000" />
       <workItem from="1740058043514" duration="8660000" />
-      <workItem from="1740123974448" duration="6883000" />
+      <workItem from="1740123974448" duration="11842000" />
     </task>
     <task id="LOCAL-00001" summary="Added 1">
       <option name="closed" value="true" />
@@ -178,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740128778246</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="4-5 complete">
+      <option name="closed" value="true" />
+      <created>1740146712116</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1740146712116</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

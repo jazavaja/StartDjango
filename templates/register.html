@@ -10,7 +10,8 @@
 <body>
 <div class="container mt-5">
     <h2>Sign Up</h2>
-    <form>
+    <form method="POST" action="{% url 'create_person' %}">
+        {% csrf_token %}
         <div class="mb-3">
             <label for="name" class="form-label">Your Name</label>
             <input type="text" class="form-control" id="name" name="first_name" required>
@@ -37,19 +38,17 @@
             <label for="name" class="form-label">Mobile</label>
             <input type="text" class="form-control" id="name" name="mobile" required>
         </div>
-        <div class="mb-3">
-            <label for="name" class="form-label">User Name</label>
-            <input type="text" class="form-control" id="name" name="username" required>
-        </div>
         
         <div class="mb-3">
             <label for="password" class="form-label">Password</label>
             <input type="password" class="form-control" id="password" required>
         </div>
+        
         <div class="mb-3">
             <label for="repeat-password" class="form-label">Repeat your password</label>
             <input type="password" class="form-control" id="repeat-password" required>
         </div>
+        
         <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="terms" required>
             <label class="form-check-label" for="terms">I agree to all statements in Terms of Service</label>
