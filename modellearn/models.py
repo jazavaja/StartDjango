@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.hashers import make_password
 
 
 # Create your models here.
@@ -10,10 +11,16 @@ class Person(models.Model):
     email = models.EmailField(unique=True)
     username = models.CharField(unique=True, max_length=100)
     mobile = models.CharField(unique=True, max_length=13, null=True, blank=True)
-    description = models.TextField()
+    sex = models.BooleanField(blank=True, null=True)
+    password = models.CharField(max_length=250, null=True, blank=True)
     create_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    sex = models.BooleanField(blank=True, null=True)
+    birthday = models.DateTimeField(blank=True, null=True)
+
+    def save(self, *args, **kwargs):
+        self.password = make_password(self.password)
+
+        super().save(*args, **kwargs)
 
     class Meta:
         db_table = 'human'
