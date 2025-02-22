@@ -1,29 +1,38 @@
+from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.contrib.auth.hashers import make_password
 
 
 # Create your models here.
 
-class Person(models.Model):
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=50)
+
+class Person(AbstractUser):
     age = models.IntegerField(default=18)
-    email = models.EmailField(unique=True)
-    username = models.CharField(unique=True, max_length=100)
     mobile = models.CharField(unique=True, max_length=13, null=True, blank=True)
     sex = models.BooleanField(blank=True, null=True)
-    password = models.CharField(max_length=250, null=True, blank=True)
     create_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     birthday = models.DateTimeField(blank=True, null=True)
 
-    def save(self, *args, **kwargs):
-        self.password = make_password(self.password)
+    class Meta:
+        db_table = 'person'
+        ordering = ['create_at']
+        verbose_name_plural = 'person ha'
+        verbose_name = 'person'
 
-        super().save(*args, **kwargs)
+
+class Student(models.Model):
+    person = models.OneToOneField(Person, models.CASCADE)
+    iq = models.PositiveIntegerField(blank=True, null=True)
 
     class Meta:
-        db_table = 'human'
-        ordering = ['create_at']
-        verbose_name_plural = 'personha'
-        verbose_name = 'person'
+        db_table = "student"
+
+
+class PersonAddress(models.Model):
+    person = models.ForeignKey(Person, models.CASCADE)
+    city = models.CharField(max_length=100)
+    address = models.TextField()
+
+    class Meta:
+        db_table = "person_address"
