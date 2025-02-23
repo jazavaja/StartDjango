@@ -1,3 +1,4 @@
+from django.db.models import F, Q
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.http import HttpResponse
@@ -9,6 +10,26 @@ from modellearn.models import Person
 # Create your views here.
 def show_register(request):
     return render(request, "register.html")
+
+
+def get_person_update_after_create(request):
+    persons = Person.objects.filter(updated_at__gt=F('create_at'))
+    print("---------------")
+    for person in persons:
+        print(person.first_name)
+    print("=============")
+
+    return HttpResponse('')
+    pass
+
+
+def get_person_with_q(request):
+    persons = Person.objects.filter(Q(age__lt=30) & Q(sex__exact=1))
+    print("-----------")
+    for person in persons:
+        print(person.first_name)
+    print("===========")
+    return HttpResponse('')
 
 
 def create_person(request):
