@@ -1,0 +1,58 @@
+{% extends 'base_layout.html' %}
+
+{% block title %}
+    List Products
+{% endblock %}
+
+{% block main %}
+    <h1>List Product</h1>
+    <a class="btn btn-success" href="{% url 'create_product' %}">
+        Create Product
+    </a>
+
+
+    <form action="{% url 'list_products' %}" method="GET">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="search_input" placeholder="Search products..."
+                   aria-label="Search products">
+            <div class="input-group-append">
+                <button type="submit" class="input-group-text">
+                    🔍
+                </button>
+            </div>
+        </div>
+    </form>
+
+
+    <table class="table table-striped table-hover table-bordered">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Category</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for c in products %}
+            <tr>
+                <th scope="row">{{ c.id }}</th>
+                <td>{{ c.name }}</td>
+                <td>{{ c.price }}</td>
+                <td>{{ c.category.name }}</td>
+                <td>
+                    <a class="btn btn-success" href="{% url 'update_product' id=c.id %}">
+                        View - Update
+                    </a>
+                    <a class="btn btn-danger" href="{% url 'delete_product' id=c.id %}">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+
+
+        </tbody>
+    </table>
+{% endblock %}
