@@ -1,0 +1,41 @@
+{% extends 'base_layout.html' %}
+
+{% block title %}
+    لیست محصولات
+{% endblock %}
+
+{% block main %}
+    <h1>List Category</h1>
+    <a class="btn btn-success" href="{% url 'create_category' %}">
+        Create Category
+    </a>
+    <table class="table table-striped table-hover table-bordered">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Key</th>
+            <th scope="col">Operate</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for c in category %}
+            <tr>
+                <th scope="row">{{ c.id }}</th>
+                <td>{{ c.name }}</td>
+                <td>{{ c.key }}</td>
+                <td>
+                    <a class="btn btn-success" href="{% url 'detail_category_view' id=c.id %}">
+                        View - Update
+                    </a>
+                    <a class="btn btn-danger" href="{% url 'delete_category' id=c.id %}">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+
+
+        </tbody>
+    </table>
+{% endblock %}

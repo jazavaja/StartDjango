@@ -1,0 +1,28 @@
+{% extends 'base_layout.html' %}
+
+{% block title %}
+    Show/Update Category
+{% endblock %}
+
+{% block main %}
+    <form class="p-4 border rounded shadow-sm bg-light" method="POST" >
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="categoryName" class="form-label fw-bold text-dark">Category Name</label>
+
+            <input type="text" class="form-control" id="categoryName" name="category_name"
+                   placeholder="Enter category name"
+                   required>
+        </div>
+        <div class="mb-3">
+            <label for="categoryDescription" class="form-label fw-bold text-dark">Category Key</label>
+            <input type="text" class="form-control" id="categoryName" name="category_key"
+                   placeholder="Enter category Key"
+                   required>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a type="reset" class="btn btn-info" href="{% url 'list_category' %}">Back to List Category</a>
+    </form>
+{% endblock %}
