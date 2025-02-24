@@ -1,9 +1,11 @@
+from django.contrib.auth import login
 from django.db.models import F, Q
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404, redirect
 
+from modellearn.forms import PersonForm
 from modellearn.models import Person
 
 
@@ -13,7 +15,21 @@ def show_register(request):
 
 
 def profile(request):
+
     return render(request, 'profile.html')
+
+
+def register(request):
+    if request.method == "POST":
+        form = PersonForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect('profile')
+
+    else:
+        form = PersonForm()
+    return render(request, 'register.html', {"form": form})
 
 
 def get_person_update_after_create(request):

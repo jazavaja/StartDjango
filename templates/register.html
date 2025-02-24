@@ -1,0 +1,40 @@
+{% extends 'base_layout.html' %}
+
+{% block title %}
+    Register Form
+{% endblock %}
+
+{% block main %}
+    <form method="post">
+    {% csrf_token %}
+{#        {{ form.as_p }}#}
+        <div>
+            <label>First name</label>
+            {{ form.first_name }}
+        </div>
+        <div>
+            <label>Last Name</label>
+            {{ form.last_name }}
+        </div>
+        <div>
+            <label>Username</label>
+            {{ form.username }}
+        </div>
+        <div>
+            <label>Email</label>
+            {{ form.email }}
+        </div>
+        <div>
+            <label>Password</label>
+            {{ form.password1 }}
+        </div>
+        <div>
+            <label>Confirm Password</label>
+            {{ form.password2 }}
+        </div>
+        <button type="submit">
+            Register
+        </button>
+    </form>
+
+{% endblock %}

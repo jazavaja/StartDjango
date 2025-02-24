@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -15,50 +15,60 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/cover/">
 
     <!-- Bootstrap core CSS -->
-      {% load static %}
-  <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="{% static 'css/cover.css' %}" rel="stylesheet">
-  </head>
+</head>
 
-  <body class="text-center">
+<body class="text-center">
 
-    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
-      <header class="masthead mb-auto">
+<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    {% if user.is_authenticated %}
+        <p>Welcome, {{ user.username }}!</p>
+        <form method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button type="submit">Exit</button>
+        </form>
+    {% endif %}
+    <header class="masthead mb-auto">
         <div class="inner">
-          <h3 class="masthead-brand">Cover</h3>
-          <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link active" href="#">Home</a>
-            <a class="nav-link" href="{% url 'list_category' %}">Category</a>
-            <a class="nav-link" href="{% url 'list_products' %}">Products</a>
-            <a class="nav-link" href="{% url 'show_register_wf' %}">Register WF</a>
-            <a class="nav-link" href="{% url 'login' %}">Login</a>
-          </nav>
+            <h3 class="masthead-brand">Cover</h3>
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link active" href="#">Home</a>
+                <a class="nav-link" href="{% url 'list_category' %}">Category</a>
+                <a class="nav-link" href="{% url 'list_products' %}">Products</a>
+                <a class="nav-link" href="{% url 'show_register_wf' %}">Register WF</a>
+                <a class="nav-link" href="{% url 'login' %}">Login</a>
+                <a class="nav-link" href="{% url 'register' %}">Register</a>
+            </nav>
         </div>
-      </header>
+    </header>
 
-      <main role="main" class="inner cover">
-          {% block main %}
-          {% endblock %}
-      </main>
+    <main role="main" class="inner cover">
+        {% block main %}
+        {% endblock %}
+    </main>
 
-      <footer class="mastfoot mt-auto">
+    <footer class="mastfoot mt-auto">
         <div class="inner">
-          <p>Learn Django </p>
+            <p>Learn Django </p>
         </div>
-      </footer>
-    </div>
+    </footer>
+</div>
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
 {#    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')#}
 {#    </script>#}
-    <script src="{% static 'js/popper.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-  </body>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
 </html>
