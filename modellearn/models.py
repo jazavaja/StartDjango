@@ -17,7 +17,7 @@ class Person(AbstractUser):
     class Meta:
         db_table = 'person'
         ordering = ['create_at']
-        verbose_name_plural = 'person ha'
+        verbose_name_plural = 'persons'
         verbose_name = 'person'
 
 

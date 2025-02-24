@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f75822f0-459d-46e6-a5ca-f8630c13cc18" name="Changes" comment="4-11 -2  complete">
-      <change afterPath="$PROJECT_DIR$/static/css/all.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/product_create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/product_list_view.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/product_update_view.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base_layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base_layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modellearn/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/modellearn/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modellearn/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/modellearn/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
