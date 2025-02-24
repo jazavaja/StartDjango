@@ -9,8 +9,10 @@ from modellearn.models import Person
 
 # Create your views here.
 def show_register(request):
-    return render(request, "register.html")
+    return render(request, "register_wf.html")
 
+def profile(request):
+    return  render(request,'profile.html')
 
 def get_person_update_after_create(request):
     persons = Person.objects.filter(updated_at__gt=F('create_at'))

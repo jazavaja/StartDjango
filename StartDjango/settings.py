@@ -29,6 +29,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 AUTH_USER_MODEL = 'modellearn.Person'
+LOGIN_REDIRECT_URL = 'profile'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
