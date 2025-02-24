@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f75822f0-459d-46e6-a5ca-f8630c13cc18" name="Changes" comment="4-11 -2  complete">
-      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StartDjango/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/StartDjango/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modellearn/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/modellearn/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modellearn/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/modellearn/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base_layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base_layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register_wf.html" afterDir="false" />
-    </list>
+    <list default="true" id="f75822f0-459d-46e6-a5ca-f8630c13cc18" name="Changes" comment="5-2 complete" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -237,7 +227,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740318441533</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="5-2 complete">
+      <option name="closed" value="true" />
+      <created>1740389487359</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1740389487360</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,6 +274,7 @@
     <MESSAGE value="4-10 complete" />
     <MESSAGE value="4-11 -1  complete" />
     <MESSAGE value="4-11 -2  complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="4-11 -2  complete" />
+    <MESSAGE value="5-2 complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="5-2 complete" />
   </component>
 </project>
