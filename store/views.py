@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required,permission_required
 from django.shortcuts import render, redirect
 
 from store.models import Category, Product
@@ -15,6 +16,8 @@ def detail_category_view(request, id):
     return render(request, 'view_category.html', {'category': category})
 
 
+@login_required
+@permission_required('store.increase_price',raise_exception=True)
 def create_category_view(request):
     if request.method == 'POST':
         name = request.POST.get('category_name')

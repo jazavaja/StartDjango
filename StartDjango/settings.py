@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 
 AUTH_USER_MODEL = 'modellearn.Person'
 LOGIN_REDIRECT_URL = 'profile'
+LOGIN_URL = '/person/login'
 
 INSTALLED_APPS = [
     'django.contrib.admin',

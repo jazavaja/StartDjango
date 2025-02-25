@@ -21,6 +21,7 @@ class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
     class Meta:
+        permissions = [('increase_price', 'Product can increase price')]
         verbose_name_plural = "products"
         verbose_name = "Product"
         db_table = 'product'
