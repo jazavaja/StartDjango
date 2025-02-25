@@ -4,9 +4,14 @@ from django.utils.decorators import method_decorator
 from django.views import View
 from django.views.decorators.csrf import csrf_exempt
 
+from user.models import User
+
 
 # Create your views here.
 
+def create_user_custom(request):
+    User.objects.create_user('111juju@juju.com','445566778899')
+    return HttpResponse('')
 def save_session(request):
     request.session['username'] = "JavadSarlak"
     return HttpResponse('')

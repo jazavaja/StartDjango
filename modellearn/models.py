@@ -13,7 +13,6 @@ class Person(AbstractUser):
     create_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     birthday = models.DateTimeField(blank=True, null=True)
-
     class Meta:
         db_table = 'person'
         ordering = ['create_at']
