@@ -7,6 +7,27 @@ from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 
+def save_session(request):
+    request.session['username'] = "JavadSarlak"
+    return HttpResponse('')
+
+
+def delete_session(request):
+    if "username" in request.session:
+        del request.session['username']
+    return HttpResponse('')
+
+
+def clear_session(request):
+    request.session.flush()
+    return HttpResponse('')
+
+
+def get_session(request):
+    result = request.session.get('username', None)
+    return HttpResponse(result)
+
+
 @method_decorator(csrf_exempt, name='dispatch')
 class UserView(View):
     def get(self, request):
