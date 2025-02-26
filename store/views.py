@@ -1,23 +1,32 @@
-from django.contrib.auth.decorators import login_required,permission_required
+from django.contrib.auth.decorators import login_required, permission_required, user_passes_test
 from django.shortcuts import render, redirect
-
+from django.core.exceptions import PermissionDenied
 from store.models import Category, Product
 
 
 # Create your views here.
+def group_required(group_name):
+    def decorator(view_func):
+        def wrapper(request, *args, **kwargs):
+            if request.user.groups.filter(name=group_name).exists():
+                return view_func(request, *args, **kwargs)
+            else:
+                raise PermissionDenied()
 
+        return wrapper
+
+    return decorator
+
+
+@group_required('Admin')
 def list_category_view(request):
+    user = request.user.groups.filter(name='Admin').exists()
     category = Category.objects.all()
-    return render(request, 'list_category.html', {'category': category})
-
-
-def detail_category_view(request, id):
-    category = Category.objects.get(id=id)
-    return render(request, 'view_category.html', {'category': category})
+    return render(request, 'list_category.html', {'category': category, 'is_admin': user})
 
 
 @login_required
-@permission_required('store.increase_price',raise_exception=True)
+@permission_required('store.increase_price', raise_exception=True)
 def create_category_view(request):
     if request.method == 'POST':
         name = request.POST.get('category_name')
@@ -26,6 +35,16 @@ def create_category_view(request):
     return render(request, 'create_category.html')
 
 
+def is_admin(user):
+    print("hello: ", user.is_superuser)
+    if user.is_superuser:
+        return True
+    else:
+        # return False
+        raise PermissionDenied("You do not have permission to access this resource.")
+
+
+@user_passes_test(is_admin, login_url="/", )
 def update_category_view(request, id):
     category = Category.objects.get(id=id)
     if request.method == 'POST':

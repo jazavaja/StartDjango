@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f75822f0-459d-46e6-a5ca-f8630c13cc18" name="Changes" comment="5-5 complete">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/39c7c72b-c5bd-45ca-8d34-05e5914ec5b6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/39c7c72b-c5bd-45ca-8d34-05e5914ec5b6.xml" afterDir="false" />
+    <list default="true" id="f75822f0-459d-46e6-a5ca-f8630c13cc18" name="Changes" comment="5-6 complete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StartDjango/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/StartDjango/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +134,8 @@
       <workItem from="1740310651222" duration="11650000" />
       <workItem from="1740476525292" duration="21000" />
       <workItem from="1740494491433" duration="6984000" />
-      <workItem from="1740505771755" duration="3702000" />
+      <workItem from="1740505771755" duration="3709000" />
+      <workItem from="1740558255772" duration="2822000" />
     </task>
     <task id="LOCAL-00001" summary="Added 1">
       <option name="closed" value="true" />
@@ -269,7 +265,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740504736712</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="5-6 complete">
+      <option name="closed" value="true" />
+      <created>1740511520622</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1740511520622</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,6 +315,7 @@
     <MESSAGE value="5-2 complete" />
     <MESSAGE value="5-4 complete" />
     <MESSAGE value="5-5 complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="5-5 complete" />
+    <MESSAGE value="5-6 complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="5-6 complete" />
   </component>
 </project>
