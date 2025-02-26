@@ -1,6 +1,8 @@
 from django.contrib.auth.decorators import login_required, permission_required, user_passes_test
 from django.shortcuts import render, redirect
 from django.core.exceptions import PermissionDenied
+from django.core.mail import send_mail, EmailMessage
+from store.forms import ContactForm
 from store.models import Category, Product
 
 
@@ -103,3 +105,33 @@ def product_delete_view(request, id):
     p = Product.objects.get(id=id)
     p.delete()
     return redirect('list_products')
+
+
+def contact_view(request):
+    result = None
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            message = form.cleaned_data['message']
+
+            #     Send Email
+
+            try:
+                result_email = send_mail(
+                    f'Contact message To {name} - {email}',
+                    message,
+                    'from@example.ir',
+                    [email],
+                )
+                if result_email == 1:
+                    result = True
+            except Exception as e:
+                result = False
+        else:
+            result = False
+    else:
+        form = ContactForm()
+
+    return render(request, 'contact.html', {"form": form, "result": result})

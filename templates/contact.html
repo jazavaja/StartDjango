@@ -1,0 +1,23 @@
+{% extends 'base_layout.html' %}
+
+{% block title %}
+    صفحه ارتباط با ما
+{% endblock %}
+
+{% block main %}
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">
+            ارسال
+        </button>
+    </form>
+    
+    {% if  result is not None %}
+        {% if result == True %}
+            Ersal Shod
+        {% else %}
+            Ersal nashod
+        {% endif %}
+    {% endif %}
+{% endblock %}
