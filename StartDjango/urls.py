@@ -25,4 +25,3 @@ urlpatterns = [
     path('person/', include('modellearn.urls')),
     path('store/', include('store.urls'))
 ]
-handler404
