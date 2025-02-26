@@ -23,5 +23,6 @@ urlpatterns = [
     path('', include('main.urls')),
     path('user/', include('user.urls')),
     path('person/', include('modellearn.urls')),
-    path('store/', include('store.urls'))
+    path('store/', include('store.urls')),
+    path('accounts/', include('allauth.urls')),
 ]
