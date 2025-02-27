@@ -1,8 +1,9 @@
 from django.contrib.auth.decorators import login_required, permission_required, user_passes_test
-from django.shortcuts import render, redirect
 from django.core.exceptions import PermissionDenied
-from django.core.mail import send_mail, EmailMessage
-from store.forms import ContactForm
+from django.core.mail import send_mail
+from django.shortcuts import render, redirect
+
+from store.forms import ContactForm, ProductForm
 from store.models import Category, Product
 
 
@@ -20,7 +21,7 @@ def group_required(group_name):
     return decorator
 
 
-@group_required('Admin')
+# @group_required('Admin')
 def list_category_view(request):
     user = request.user.groups.filter(name='Admin').exists()
     category = Category.objects.all()
@@ -28,7 +29,7 @@ def list_category_view(request):
 
 
 @login_required
-@permission_required('store.increase_price', raise_exception=True)
+# @permission_required('store.increase_price', raise_exception=True)
 def create_category_view(request):
     if request.method == 'POST':
         name = request.POST.get('category_name')
@@ -77,16 +78,14 @@ def product_list_view(request):
 
 def product_create_view(request):
     if request.method == "POST":
-        product_name = request.POST.get('product_name')
-        product_price = request.POST.get('product_price')
-        product_category = request.POST.get('product_category')
-
-        print(f"Product name {product_name} .. price {product_price} ... category {product_category}")
-        product = Product(name=product_name, price=product_price, category_id=product_category)
-        product.save()
-
+        forms = ProductForm(request.POST)
+        if forms.is_valid():
+            forms.save()
+            forms = ProductForm()
+    else:
+        forms = ProductForm()
     category = Category.objects.all()
-    return render(request, 'product_create.html', {'category': category})
+    return render(request, 'product_create.html', {'category': category,'forms':forms})
 
 
 def product_update_view(request, id):
