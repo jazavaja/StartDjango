@@ -10,8 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
-from pathlib import Path
 import os
+from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -108,19 +108,24 @@ AUTHENTICATION_BACKENDS = [
 
 WSGI_APPLICATION = 'StartDjango.wsgi.application'
 
+# --------------------------------------------------------
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "hasa@gmail.com"
 EMAIL_HOST_PASSWORD = "32323232"
+
 # -----------------------
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# -------------------------------
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 SESSION_COOKIE_AGE = 1000000
 SESSION_SAVE_EVERY_REQUEST = True
-
 
 # ------------------------------
 

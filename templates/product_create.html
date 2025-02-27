@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block main %}
-    <form class="p-4 border rounded shadow-sm bg-light" method="POST" action="{% url 'create_product' %}">
+    <form class="p-4 border rounded shadow-sm bg-light" method="POST" action="{% url 'create_product' %}" enctype="multipart/form-data">
         {% csrf_token %}
         {% load filter_class %}
 
@@ -23,8 +23,22 @@
             <label for="product_category" class="form-label fw-bold text-dark">product Category</label>
             {{ forms.category|add_class:"form-control" }}
         </div>
+        
+        <div class="mb-3">
+            <label for="product_category" class="form-label fw-bold text-dark">Product Picture</label>
+            {{ forms.picture|add_class:"form-control" }}
+        </div>
+        
 
         <button type="submit" class="btn btn-primary">Submit</button>
         <a type="reset" class="btn btn-info" href="{% url 'list_products' %}">Back to List product</a>
     </form>
+    
+    <p>
+        {{ forms.non_field_errors }}
+    </p>
+    
+    <p>
+        {{ forms.errors }}
+    </p>
 {% endblock %}

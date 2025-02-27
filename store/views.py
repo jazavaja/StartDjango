@@ -78,7 +78,7 @@ def product_list_view(request):
 
 def product_create_view(request):
     if request.method == "POST":
-        forms = ProductForm(request.POST)
+        forms = ProductForm(request.POST,request.FILES)
         if forms.is_valid():
             forms.save()
             forms = ProductForm()
