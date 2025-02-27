@@ -127,9 +127,11 @@ def contact_view(request):
                 if result_email == 1:
                     result = True
             except Exception as e:
-                result = False
+                result = e
+                # result = False
         else:
-            result = False
+            result = form.errors
+            print(result)
     else:
         form = ContactForm()
 
