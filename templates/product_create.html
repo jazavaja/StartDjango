@@ -8,29 +8,32 @@
     <form class="p-4 border rounded shadow-sm bg-light" method="POST" action="{% url 'create_product' %}" enctype="multipart/form-data">
         {% csrf_token %}
         {% load filter_class %}
+        {% load crispy_forms_tags %}
 
-        <div class="mb-3">
-            <label for="productName" class="form-label fw-bold text-dark">product Name</label>
-            {{ forms.name|add_class:"form-control" }}
-
-        </div>
-        <div class="mb-3">
-            <label for="product_price" class="form-label fw-bold text-dark">product Price</label>
-            {{ forms.price|add_class:"form-control" }}
-
-        </div>
-        <div class="mb-3">
-            <label for="product_category" class="form-label fw-bold text-dark">product Category</label>
-            {{ forms.category|add_class:"form-control" }}
-        </div>
-        
-        <div class="mb-3">
-            <label for="product_category" class="form-label fw-bold text-dark">Product Picture</label>
-            {{ forms.picture|add_class:"form-control" }}
-        </div>
-        
-
-        <button type="submit" class="btn btn-primary">Submit</button>
+        {% crispy forms %}
+{#        {{ forms|crispy }}#}
+{#        <div class="mb-3">#}
+{#            <label for="productName" class="form-label fw-bold text-dark">product Name</label>#}
+{#            {{ forms.name|add_class:"form-control" }}#}
+{##}
+{#        </div>#}
+{#        <div class="mb-3">#}
+{#            <label for="product_price" class="form-label fw-bold text-dark">product Price</label>#}
+{#            {{ forms.price|add_class:"form-control" }}#}
+{##}
+{#        </div>#}
+{#        <div class="mb-3">#}
+{#            <label for="product_category" class="form-label fw-bold text-dark">product Category</label>#}
+{#            {{ forms.category|add_class:"form-control" }}#}
+{#        </div>#}
+{##}
+{#        <div class="mb-3">#}
+{#            <label for="product_category" class="form-label fw-bold text-dark">Product Picture</label>#}
+{#            {{ forms.picture|add_class:"form-control" }}#}
+{#        </div>#}
+{##}
+{##}
+{#        <button type="submit" class="btn btn-primary">Submit</button>#}
         <a type="reset" class="btn btn-info" href="{% url 'list_products' %}">Back to List product</a>
     </form>
     

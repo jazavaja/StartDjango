@@ -1,5 +1,6 @@
 from django import forms
-
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Submit
 from store.models import Product, Category
 
 
@@ -39,4 +40,14 @@ class ProductForm(forms.ModelForm):
 
     class Meta:
         model = Product
-        fields = ['name', 'price', 'category','picture']
+        fields = ['name', 'price', 'category', 'picture']
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        self.helper.form_method = 'post'
+        self.helper.add_input(Submit('submit','ثبت محصول',css_class='btn btn-danger'))
+        self.helper.form_show_labels = False
+        self.helper.form_show_errors = False
+
+    #
