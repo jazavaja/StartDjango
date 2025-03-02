@@ -1,0 +1,15 @@
+{% extends 'base_layout.html' %}
+
+{% block title %}
+    پرسش و پاسخ
+{% endblock %}
+
+{% block main %}
+    <form method="post">
+        {% csrf_token %}
+        {{ forms.as_p }}
+        <button type="submit">
+            ارسال سوال
+        </button>
+    </form>
+{% endblock %}

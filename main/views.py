@@ -1,6 +1,8 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
-from django.urls import reverse
-from django.http import HttpResponseRedirect
+
+from main.forms import QuestionForm
+from main.models import Question
 
 
 # Create your views here.
@@ -22,3 +24,27 @@ def aboutus(request):
 def get_post(request, id):
     return ""
     # return render(request, 'post_get.html', {'id': id})
+
+
+@login_required
+def submit_question(request):
+    if request.method == "POST":
+        forms = QuestionForm(request.POST)
+        if forms.is_valid():
+            question = forms.save(commit=False)
+            question.author = request.user
+            question.save()
+    else:
+        forms = QuestionForm()
+    return render(request, 'question.html', {'forms': forms})
+    pass
+
+
+@login_required
+def list_questions(request):
+    questions = Question.objects.all()
+
+    return render(request, 'list_questions.html', {"questions": questions})
+
+def submit_answer(request, id):
+    pass

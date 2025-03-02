@@ -1,0 +1,36 @@
+{% extends 'base_layout.html' %}
+
+{% block title %}
+{% endblock %}
+
+{% block main %}
+    <div class="container mt-5">
+        {% for question in questions %}
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="text-dark">
+                        {{ question.question_title }}
+                    </h5>
+                </div>
+
+                <div class="card-body">
+                    <p class="text-dark">{{ question.question_description }}</p>
+                    <form method="post" action="{% url 'submit_question' %}">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label class="text-dark">
+                                پاسخ خود را وارد کنید
+                            </label>
+                            <textarea rows="3" class="form-control" name="content">
+                            </textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">
+                            ارسال
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        {% endfor %}
+    </div>
+{% endblock %}
