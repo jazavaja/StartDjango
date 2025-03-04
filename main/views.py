@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 
 from main.forms import QuestionForm, AnswerForm
-from main.models import Question
+from main.models import Question, Answer, Vote
 
 
 # Create your views here.
@@ -43,7 +43,7 @@ def submit_question(request):
 
 @login_required
 def list_questions(request):
-    questions = Question.objects.prefetch_related('answer_set').all()
+    questions = Question.objects.prefetch_related('answer_set__vote_set').all()
     return render(request, 'list_questions.html', {"questions": questions})
 
 
@@ -65,4 +65,30 @@ def submit_answer(request, id):
             # messages.error(request, 'پاسخ شما کوتاه بوده است لطفا حداقل 10 کاراکتر وارد نمایید')
             pass
 
+    return redirect('list_questions')
+
+
+@login_required
+def plus_vote(request, id):
+    answer = get_object_or_404(Answer, id=id)
+    user = request.user
+    vote_exist = Vote.objects.filter(answer=answer,user=user).first()
+    if vote_exist:
+        vote_exist.vote_type = 'up'
+        vote_exist.save()
+    else:
+        Vote.objects.create(user=user,answer=answer,vote_type='up')
+    return redirect('list_questions')
+
+
+@login_required
+def mines_vote(request, id):
+    answer = get_object_or_404(Answer, id=id)
+    user = request.user
+    vote_exist = Vote.objects.filter(answer=answer,user=user).first()
+    if vote_exist:
+        vote_exist.vote_type = 'down'
+        vote_exist.save()
+    else:
+        Vote.objects.create(user=user,answer=answer,vote_type='down')
     return redirect('list_questions')

@@ -38,18 +38,28 @@
                     <h3 class="text-dark">
                         لیست پاسخ ها
                     </h3>
-                    <ul>
+                    <ul class="list-group">
                         {% for answers in question.answer_set.all %}
-                            <li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
                                 <strong class="text-dark">{{ answers.content }}</strong>
+                                <div>
+                                    <a href="{% url 'plus_vote' id=answers.id %}" class="btn btn-success btn-sm">
+                                        +  ({{ answers.vote_count_up }})
+                                    </a>
+                                    
+                                    <a href="{% url 'mines_vote' id=answers.id %}" class="btn btn-danger btn-sm">
+                                        -  ({{ answers.vote_count_down }})
+                                    </a>
+                                    
+                                </div>
                             </li>
                         {% empty %}
                             <p class="text-dark">
-                            هیچ پاسخی ثبت نشده است
+                                هیچ پاسخی ثبت نشده است
                             </p>
-                            
                         {% endfor %}
                     </ul>
+
                     <div>
 
                     </div>

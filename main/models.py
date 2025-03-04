@@ -29,6 +29,20 @@ class Answer(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='تاریخ ایجاد')
     updated_at = models.DateTimeField(auto_now=True, verbose_name="تاریخ بروزرسانی")
 
+    def get_positive_vote(self):
+        return self.vote_set.filter(vote_type='up').count()
+
+    def get_negative_vote(self):
+        return self.vote_set.filter(vote_type='down').count()
+
+    @property
+    def vote_count_up(self):
+        return self.get_positive_vote()
+
+    @property
+    def vote_count_down(self):
+        return self.get_negative_vote()
+
 
 class Vote(models.Model):
     vote_tuple = (
