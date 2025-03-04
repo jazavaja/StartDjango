@@ -15,19 +15,45 @@
 
                 <div class="card-body">
                     <p class="text-dark">{{ question.question_description }}</p>
-                    <form method="post" action="{% url 'submit_question' %}">
+                    <form method="post" action="{% url 'submit_answer' id=question.id %}">
                         {% csrf_token %}
                         <div class="mb-3">
                             <label class="text-dark">
                                 پاسخ خود را وارد کنید
                             </label>
-                            <textarea rows="3" class="form-control" name="content">
-                            </textarea>
+                            <textarea class="form-control" name="content"></textarea>
                         </div>
+
                         <button type="submit" class="btn btn-success">
                             ارسال
                         </button>
                     </form>
+                    <p class="text-success">
+                        {% if messages %}
+                            {% for message in messages %}
+                                {{ message }}
+                            {% endfor %}
+                        {% endif %}
+                    </p>
+                    <h3 class="text-dark">
+                        لیست پاسخ ها
+                    </h3>
+                    <ul>
+                        {% for answers in question.answer_set.all %}
+                            <li>
+                                <strong class="text-dark">{{ answers.content }}</strong>
+                            </li>
+                        {% empty %}
+                            <p class="text-dark">
+                            هیچ پاسخی ثبت نشده است
+                            </p>
+                            
+                        {% endfor %}
+                    </ul>
+                    <div>
+
+                    </div>
+
                 </div>
             </div>
 

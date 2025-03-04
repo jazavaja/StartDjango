@@ -30,6 +30,14 @@ class QuestionForm(forms.ModelForm):
 
 
 class AnswerForm(forms.ModelForm):
+    content = forms.CharField(
+        label="پاسخ",
+        widget=forms.Textarea(attrs={'class': 'form_control'}),
+        error_messages={
+            'required': 'این فیلد الزامی است'
+        }
+    )
+
     class Meta:
         model = Answer
         fields = ['content']

@@ -1,7 +1,8 @@
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 
-from main.forms import QuestionForm
+from main.forms import QuestionForm, AnswerForm
 from main.models import Question
 
 
@@ -42,9 +43,26 @@ def submit_question(request):
 
 @login_required
 def list_questions(request):
-    questions = Question.objects.all()
-
+    questions = Question.objects.prefetch_related('answer_set').all()
     return render(request, 'list_questions.html', {"questions": questions})
 
+
+@login_required
 def submit_answer(request, id):
-    pass
+    question = get_object_or_404(Question, id=id)
+    if request.method == "POST":
+        forms = AnswerForm(request.POST)
+        if forms.is_valid():
+            result_answer = forms.save(commit=False)
+            result_answer.author = request.user
+            result_answer.question = question
+            result_answer.save()
+            messages.success(request, "پاسخ شما با موفقیت ثبت شد")
+        else:
+            for key, values in forms.errors.items():
+                for error in values:
+                    messages.error(request, error)
+            # messages.error(request, 'پاسخ شما کوتاه بوده است لطفا حداقل 10 کاراکتر وارد نمایید')
+            pass
+
+    return redirect('list_questions')

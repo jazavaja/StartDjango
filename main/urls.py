@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import aboutus, safe_asli_site, submit_question, list_questions
+from .views import aboutus, safe_asli_site, submit_question, list_questions, submit_answer
 
 urlpatterns = [
     path('', safe_asli_site, name='asli'),
