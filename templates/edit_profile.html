@@ -16,8 +16,23 @@
                     <div class="card-body text-center">
                         <form enctype="multipart/form-data" method="post">
                             {% csrf_token %}
-                            {{ forms.as_p }}
-                            <button type="submit">
+{#                            {{ forms.as_p }}#}
+                            <div class="mb-3">
+                                <label class="text-dark">Picture Profile</label>
+                                <input type="file" name="profile_picture" class="form-control" accept="image/*">
+                                {% if profile.profile_picture %}
+                                    <img src="{{ profile.profile_picture.url }}" class="img-fluid rounded-circle" alt="{{ profile.user.username}}">
+                                {% endif %}
+                            </div>
+                            <div class="mb-3">
+                                <label class="text-dark">Bio:</label>
+                                <textarea name="bio" rows="3" class="form-control">{{ profile.bio }}</textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label class="text-dark">Location: </label>
+                                <input type="text" class="form-control" name="location" value="{{ profile.location }}">
+                            </div>
+                            <button type="submit" class="btn btn-info">
                                 اپدیت کردن
                             </button>
                         </form>

@@ -57,14 +57,14 @@ def show_profile(request):
     profile = get_object_or_404(Profile, user=request.user)
     return render(request, 'profile.html', {'profile': profile})
 
-
+# github.com/jazavaja
 def edit_profile(request):
     profile = get_object_or_404(Profile, user=request.user)
     if request.method == 'POST':
         forms = ProfileForm(request.POST, request.FILES, instance=profile)
         if forms.is_valid():
             forms.save()
-            return redirect('profile')
+            return redirect('show_profile')
     else:
         forms = ProfileForm(instance=profile)
-    return render(request, 'edit_profile.html', {'forms': forms})
+    return render(request, 'edit_profile.html', {'forms': forms,'profile':profile})
