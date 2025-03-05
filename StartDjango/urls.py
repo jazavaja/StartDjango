@@ -26,6 +26,7 @@ urlpatterns = [
     path('person/', include('modellearn.urls')),
     path('store/', include('store.urls')),
     path('accounts/', include('allauth.urls')),
+    path('api/', include('myapi.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
