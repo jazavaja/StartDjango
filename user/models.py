@@ -1,10 +1,15 @@
 from django.contrib.auth.base_user import BaseUserManager
-from django.db import models
-from django.core.validators import EmailValidator
 from django.contrib.auth.models import AbstractBaseUser
+from django.core.validators import EmailValidator
+from django.db import models
+
+from modellearn.models import Person
 
 
 # Create your models here.
+# Here You can see Model custom with Abstract Base User
+# We must  use Just One Model user
+
 class UserCustomManager(BaseUserManager):
     def create_user(self, email, password=None, **extra):
         if not email:
@@ -46,3 +51,13 @@ class User(AbstractBaseUser):
         ordering = ['name']
         verbose_name_plural = 'کاربران'
         verbose_name = 'کاربر'
+
+
+class Profile(models.Model):
+    user = models.OneToOneField(Person, on_delete=models.CASCADE)
+    bio = models.TextField()
+    location = models.CharField(max_length=150, blank=True, null=True)
+    profile_picture = models.ImageField(upload_to="profile_pic/", null=True, blank=True)
+
+    def __str__(self):
+        return self.user.username

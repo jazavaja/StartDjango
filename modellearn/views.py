@@ -14,9 +14,9 @@ def show_register(request):
     return render(request, "register_wf.html")
 
 
-def profile(request):
-
-    return render(request, 'profile.html')
+# def profile(request):
+#
+#     return render(request, 'profile.html')
 
 
 def register(request):

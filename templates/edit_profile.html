@@ -1,0 +1,29 @@
+{% extends 'base_layout.html' %}
+
+{% block title %}
+    Profile Page
+{% endblock %}
+
+{% block main %}
+    {% load static %}
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header text-dark">
+                        Profile : {{ profile.user.username}}
+                    </div>
+                    <div class="card-body text-center">
+                        <form enctype="multipart/form-data" method="post">
+                            {% csrf_token %}
+                            {{ forms.as_p }}
+                            <button type="submit">
+                                اپدیت کردن
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
