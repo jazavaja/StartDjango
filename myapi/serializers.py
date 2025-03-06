@@ -27,17 +27,18 @@ class ProductApiSerializer(serializers.Serializer):
 class AuthorSerializer(serializers.ModelSerializer):
     class Meta:
         model = AuthorApi
-        fields = ['name']
+        fields = ['id','name']
 
 
 class BookSerializer(serializers.ModelSerializer):
     # author = serializers.PrimaryKeyRelatedField(queryset=AuthorApi.objects.all())
     # author = serializers.StringRelatedField()
-    author = serializers.HyperlinkedRelatedField(
-        queryset=AuthorApi.objects.all(),
-        view_name='author_detail',
-        lookup_field='id'
-    )
+    # author = serializers.HyperlinkedRelatedField(
+    #     queryset=AuthorApi.objects.all(),
+    #     view_name='author_detail',
+    #     lookup_field='id'
+    # )
+    author = AuthorSerializer()
 
     class Meta:
         model = BookApi
@@ -45,7 +46,8 @@ class BookSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         author_data = validated_data.pop('author')
-        # print("POP: ",author_data)
-        # author = AuthorApi.objects.get_or_create(**author_data)
-        book = BookApi.objects.create(author=author_data,**validated_data)
+        print("POP: ",author_data)
+        author,is_created = AuthorApi.objects.get_or_create(**author_data)
+        print("author:  ",author)
+        book = BookApi.objects.create(author=author,**validated_data)
         return book
