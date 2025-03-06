@@ -51,3 +51,15 @@ class BookSerializer(serializers.ModelSerializer):
         print("author:  ",author)
         book = BookApi.objects.create(author=author,**validated_data)
         return book
+
+    def update(self, instance, validated_data):
+        author_data = validated_data.pop('author', None)
+        if author_data:
+            author_inst = instance.author
+            for key, value in author_data.items():
+                setattr(author_inst, key, value)
+            author_inst.save()
+        for key, value in validated_data.items():
+            setattr(instance, key, value)
+        instance.save()
+        return instance

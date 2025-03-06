@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from rest_framework import generics
+from rest_framework import viewsets
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.status import HTTP_201_CREATED, HTTP_400_BAD_REQUEST, HTTP_200_OK
@@ -50,13 +51,17 @@ def books_show(request):
 class BookApiListCreateView(APIView):
     def get(self, request):
         books = BookApi.objects.all()
-        serializer = BookSerializer(books, many=True,context={'request': request})
+        serializer = BookSerializer(books, many=True, context={'request': request})
         return Response(serializer.data, status=HTTP_200_OK)
 
     def post(self, request):
         serial = BookSerializer(data=request.data)
         if serial.is_valid():
             b = serial.save()
-            return Response(BookSerializer(b,context={'request' : request}).data, status=HTTP_201_CREATED)
+            return Response(BookSerializer(b, context={'request': request}).data, status=HTTP_201_CREATED)
         return Response(serial.errors, status=HTTP_400_BAD_REQUEST)
 
+
+class BookApiListAuto(viewsets.ModelViewSet):
+    queryset = BookApi.objects.all()
+    serializer_class = BookSerializer
