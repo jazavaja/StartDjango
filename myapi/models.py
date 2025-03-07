@@ -31,5 +31,6 @@ class BookApi(models.Model):
 
     class Meta:
         db_table = 'books_api'
+
     def __str__(self):
         return self.title

@@ -7,9 +7,8 @@
     <list default="true" id="f75822f0-459d-46e6-a5ca-f8630c13cc18" name="Changes" comment="7-5 Complete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapi/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapi/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myapi/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapi/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapi/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapi/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapi/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapi/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,6 +153,7 @@
       <workItem from="1741111268676" duration="1185000" />
       <workItem from="1741160253953" duration="1095000" />
       <workItem from="1741286623890" duration="3283000" />
+      <workItem from="1741336940492" duration="5280000" />
     </task>
     <task id="LOCAL-00001" summary="Added 1">
       <option name="closed" value="true" />

@@ -27,10 +27,15 @@ class ProductApiSerializer(serializers.Serializer):
 class AuthorSerializer(serializers.ModelSerializer):
     class Meta:
         model = AuthorApi
-        fields = ['id','name']
+        fields = ['id', 'name']
+        extra_kwargs = {'id': {'read_only': False, 'required': False}}
 
 
 class BookSerializer(serializers.ModelSerializer):
+    # {
+    # title : X
+    # author : localhost/api/books/2
+    # }
     # author = serializers.PrimaryKeyRelatedField(queryset=AuthorApi.objects.all())
     # author = serializers.StringRelatedField()
     # author = serializers.HyperlinkedRelatedField(
@@ -46,20 +51,25 @@ class BookSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         author_data = validated_data.pop('author')
-        print("POP: ",author_data)
-        author,is_created = AuthorApi.objects.get_or_create(**author_data)
-        print("author:  ",author)
-        book = BookApi.objects.create(author=author,**validated_data)
+        if 'id' in author_data:
+            id_ = author_data['id']
+            try:
+                author = AuthorApi.objects.get(id=id_)
+            except AuthorApi.DoesNotExist:
+                raise serializers.ValidationError("Id Author not find")
+        else:
+            author, is_created = AuthorApi.objects.get_or_create(**author_data)
+        book = BookApi.objects.create(author=author, **validated_data)
         return book
-
-    def update(self, instance, validated_data):
-        author_data = validated_data.pop('author', None)
-        if author_data:
-            author_inst = instance.author
-            for key, value in author_data.items():
-                setattr(author_inst, key, value)
-            author_inst.save()
-        for key, value in validated_data.items():
-            setattr(instance, key, value)
-        instance.save()
-        return instance
+    #
+    # def update(self, instance, validated_data):
+    #     author_data = validated_data.pop('author', None)
+    #     if author_data:
+    #         author_inst = instance.author
+    #         for key, value in author_data.items():
+    #             setattr(author_inst, key, value)
+    #         author_inst.save()
+    #     for key, value in validated_data.items():
+    #         setattr(instance, key, value)
+    #     instance.save()
+    #     return instance
