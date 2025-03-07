@@ -3,6 +3,7 @@ from rest_framework import generics
 from rest_framework import mixins
 from rest_framework import viewsets
 from rest_framework.decorators import api_view
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.status import HTTP_201_CREATED, HTTP_400_BAD_REQUEST, HTTP_200_OK
 from rest_framework.views import APIView
@@ -36,8 +37,7 @@ class ProductGetPostMixin(mixins.ListModelMixin, mixins.CreateModelMixin, generi
     serializer_class = ProductApiModelSerializer
 
     def get(self, request, *args, **kwargs):
-
-        name = request.query_params.get('name',None)
+        name = request.query_params.get('name', None)
         if name:
             self.queryset = self.queryset.filter(name__contains=name)
         return self.list(request, *args, **kwargs)
@@ -69,9 +69,16 @@ def books_show(request):
         return Response(serial.data)
 
 
+class TestSession(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        return Response({"message": 'You are Login!!!!'})
+
+
 class BookApiListCreateView(APIView):
     def get(self, request):
-        name= request.query_params.get('name',None)
+        name = request.query_params.get('name', None)
         if name:
             books = BookApi.objects.filter(author__name__contains=name)
         else:

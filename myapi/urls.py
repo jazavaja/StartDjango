@@ -1,8 +1,10 @@
+from django.contrib.auth.views import LoginView, LogoutView
+from django.urls import include
 from django.urls import path
 from rest_framework.routers import DefaultRouter
-from django.urls import include
+
 from myapi.views import product_list_create, ProductApiListCreate, product_print, author_detail, \
-    BookApiListAuto, ProductApiUpdateView, ProductGetPostMixin
+    BookApiListAuto, ProductApiUpdateView, ProductGetPostMixin, TestSession
 
 routers = DefaultRouter()
 routers.register('books', BookApiListAuto)
@@ -17,5 +19,6 @@ urlpatterns = [
     path('author_detail/<int:id>', author_detail, name="author_detail"),
     # path('book_class',BookApiListCreateView.as_view(),name='book_class'),
     # path('book_class',BookApiListAuto.as_view(),name='book_class'),
-    path('', include(routers.urls))
+    path('', include(routers.urls)),
+    path('test_session',TestSession.as_view(),name='test_session')
 ]
