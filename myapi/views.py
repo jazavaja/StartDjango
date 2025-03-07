@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from rest_framework import generics
+from rest_framework import mixins
 from rest_framework import viewsets
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -23,6 +24,26 @@ def product_list_create(request):
 class ProductApiListCreate(generics.ListCreateAPIView):
     queryset = ProductApi.objects.all()
     serializer_class = ProductApiModelSerializer
+
+
+class ProductApiUpdateView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = ProductApi.objects.all()
+    serializer_class = ProductApiModelSerializer
+
+
+class ProductGetPostMixin(mixins.ListModelMixin, mixins.CreateModelMixin, generics.GenericAPIView):
+    queryset = ProductApi.objects.all()
+    serializer_class = ProductApiModelSerializer
+
+    def get(self, request, *args, **kwargs):
+
+        name = request.query_params.get('name',None)
+        if name:
+            self.queryset = self.queryset.filter(name__contains=name)
+        return self.list(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        return self.create(request, *args, **kwargs)
 
 
 def product_print(request):
@@ -50,7 +71,11 @@ def books_show(request):
 
 class BookApiListCreateView(APIView):
     def get(self, request):
-        books = BookApi.objects.all()
+        name= request.query_params.get('name',None)
+        if name:
+            books = BookApi.objects.filter(author__name__contains=name)
+        else:
+            books = BookApi.objects.all()
         serializer = BookSerializer(books, many=True, context={'request': request})
         return Response(serializer.data, status=HTTP_200_OK)
 
