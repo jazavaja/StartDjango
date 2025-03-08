@@ -72,7 +72,7 @@ def books_show(request):
         return Response(serial.data)
 
 
-class TestSession(APIView):
+class TestApiAuth(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
