@@ -1,13 +1,16 @@
 from django.http import HttpResponse
+from django.shortcuts import get_object_or_404
 from rest_framework import generics
 from rest_framework import mixins
 from rest_framework import viewsets
+from rest_framework.authtoken.models import Token
 from rest_framework.decorators import api_view
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.status import HTTP_201_CREATED, HTTP_400_BAD_REQUEST, HTTP_200_OK
 from rest_framework.views import APIView
 
+from modellearn.models import Person
 from myapi.models import ProductApi, BookApi
 from .serializers import ProductApiModelSerializer, ProductApiSerializer, BookSerializer
 
@@ -97,3 +100,10 @@ class BookApiListCreateView(APIView):
 class BookApiListAuto(viewsets.ModelViewSet):
     queryset = BookApi.objects.all()
     serializer_class = BookSerializer
+
+
+def token_create_custom(request, id):
+
+    user = get_object_or_404(Person,id=id)
+    token, created = Token.objects.get_or_create(user=user)
+    return HttpResponse(f'token {token}     ***  created {created}')

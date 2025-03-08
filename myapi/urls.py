@@ -1,10 +1,11 @@
 from django.contrib.auth.views import LoginView, LogoutView
 from django.urls import include
 from django.urls import path
+from rest_framework.authtoken.views import obtain_auth_token
 from rest_framework.routers import DefaultRouter
 
 from myapi.views import product_list_create, ProductApiListCreate, product_print, author_detail, \
-    BookApiListAuto, ProductApiUpdateView, ProductGetPostMixin, TestSession
+    BookApiListAuto, ProductApiUpdateView, ProductGetPostMixin, TestSession, token_create_custom
 
 routers = DefaultRouter()
 routers.register('books', BookApiListAuto)
@@ -20,5 +21,8 @@ urlpatterns = [
     # path('book_class',BookApiListCreateView.as_view(),name='book_class'),
     # path('book_class',BookApiListAuto.as_view(),name='book_class'),
     path('', include(routers.urls)),
-    path('test_session',TestSession.as_view(),name='test_session')
+    path('test_session',TestSession.as_view(),name='test_session'),
+    path('token_create', obtain_auth_token, name="token_create"),
+    path('token_create_custom/<int:id>',token_create_custom,name="token_create_custom")
+
 ]

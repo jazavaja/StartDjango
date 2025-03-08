@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f75822f0-459d-46e6-a5ca-f8630c13cc18" name="Changes" comment="7-6 Complete">
+    <list default="true" id="f75822f0-459d-46e6-a5ca-f8630c13cc18" name="Changes" comment="7-8 Complete">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/39c7c72b-c5bd-45ca-8d34-05e5914ec5b6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/39c7c72b-c5bd-45ca-8d34-05e5914ec5b6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StartDjango/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/StartDjango/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
@@ -372,7 +373,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741353116505</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="7-8 Complete">
+      <option name="closed" value="true" />
+      <created>1741373219169</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1741373219169</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,6 +434,7 @@
     <MESSAGE value="7-2 Complete" />
     <MESSAGE value="7-5 Complete" />
     <MESSAGE value="7-6 Complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="7-6 Complete" />
+    <MESSAGE value="7-8 Complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="7-8 Complete" />
   </component>
 </project>
