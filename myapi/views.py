@@ -5,6 +5,7 @@ from rest_framework import mixins
 from rest_framework import viewsets
 from rest_framework.authtoken.models import Token
 from rest_framework.decorators import api_view
+from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.status import HTTP_201_CREATED, HTTP_400_BAD_REQUEST, HTTP_200_OK
@@ -79,6 +80,12 @@ class TestApiAuth(APIView):
         return Response({"message": 'You are Login!!!!'})
 
 
+class CustomPaginator(PageNumberPagination):
+    page_size = 4
+    page_query_param = 'safe'
+    page_size_query_param = 'chand'
+
+
 class BookApiListCreateView(APIView):
     def get(self, request):
         name = request.query_params.get('name', None)
@@ -86,8 +93,11 @@ class BookApiListCreateView(APIView):
             books = BookApi.objects.filter(author__name__contains=name)
         else:
             books = BookApi.objects.all()
-        serializer = BookSerializer(books, many=True, context={'request': request})
-        return Response(serializer.data, status=HTTP_200_OK)
+        paginator = CustomPaginator()
+        result = paginator.paginate_queryset(books, request)
+        serializer = BookSerializer(result, many=True, context={'request': request})
+        return paginator.get_paginated_response(serializer.data)
+        # return Response(serializer.data, status=HTTP_200_OK)
 
     def post(self, request):
         serial = BookSerializer(data=request.data)
@@ -103,7 +113,6 @@ class BookApiListAuto(viewsets.ModelViewSet):
 
 
 def token_create_custom(request, id):
-
-    user = get_object_or_404(Person,id=id)
+    user = get_object_or_404(Person, id=id)
     token, created = Token.objects.get_or_create(user=user)
     return HttpResponse(f'token {token}     ***  created {created}')
