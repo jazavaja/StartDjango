@@ -7,6 +7,7 @@ class ProductApi(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
+    picture = models.ImageField(upload_to='product_picture/',null=True,blank=True)
     create_at = models.DateField()
 
     def __str__(self):

@@ -7,7 +7,7 @@ from .models import ProductApi
 class ProductApiModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProductApi
-        fields = ['name', 'id','description', 'price','create_at']
+        fields = ['name', 'id', 'description', 'price', 'create_at', 'picture']
 
 
 class ProductApiSerializer(serializers.Serializer):
