@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f75822f0-459d-46e6-a5ca-f8630c13cc18" name="Changes" comment="7-10 Complete">
+    <list default="true" id="f75822f0-459d-46e6-a5ca-f8630c13cc18" name="Changes" comment="7-11-1 Complete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StartDjango/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/StartDjango/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myapi/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapi/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -154,6 +155,8 @@
       <workItem from="1741286623890" duration="3283000" />
       <workItem from="1741336940492" duration="9776000" />
       <workItem from="1741436787974" duration="3717000" />
+      <workItem from="1741464133239" duration="614000" />
+      <workItem from="1741514055342" duration="80000" />
     </task>
     <task id="LOCAL-00001" summary="Added 1">
       <option name="closed" value="true" />
@@ -395,7 +398,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741453805109</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="7-11-1 Complete">
+      <option name="closed" value="true" />
+      <created>1741454524962</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1741454524962</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -424,7 +435,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="3-5 custom tags ok" />
     <MESSAGE value="4-1 4-2 4-3 complete" />
     <MESSAGE value="4-4 complete" />
     <MESSAGE value="4-5 complete" />
@@ -449,6 +459,7 @@
     <MESSAGE value="7-6 Complete" />
     <MESSAGE value="7-8 Complete" />
     <MESSAGE value="7-10 Complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="7-10 Complete" />
+    <MESSAGE value="7-11-1 Complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="7-11-1 Complete" />
   </component>
 </project>

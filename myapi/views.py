@@ -5,7 +5,7 @@ from rest_framework import mixins
 from rest_framework import viewsets
 from rest_framework.authtoken.models import Token
 from rest_framework.decorators import api_view
-from rest_framework.pagination import PageNumberPagination, LimitOffsetPagination
+from rest_framework.pagination import PageNumberPagination, LimitOffsetPagination, CursorPagination,BasePagination
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.status import HTTP_201_CREATED, HTTP_400_BAD_REQUEST
@@ -86,6 +86,11 @@ class CustomPaginator(PageNumberPagination):
     page_size_query_param = 'chand'
 
 
+class CustomCursorPaginator(CursorPagination):
+    page_size = 5
+    ordering = ['id', 'title']
+
+
 class CustomLimitPaginator(LimitOffsetPagination):
     default_limit = 5
     max_limit = 20
@@ -99,7 +104,7 @@ class BookApiListCreateView(APIView):
             books = BookApi.objects.filter(author__name__contains=name)
         else:
             books = BookApi.objects.all()
-        paginator = CustomLimitPaginator()
+        paginator = CustomCursorPaginator()
         result = paginator.paginate_queryset(books, request)
         serializer = BookSerializer(result, many=True, context={'request': request})
         return paginator.get_paginated_response(serializer.data)
