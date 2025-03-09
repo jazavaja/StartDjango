@@ -1,11 +1,12 @@
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import generics
 from rest_framework import mixins
 from rest_framework import viewsets
 from rest_framework.authtoken.models import Token
 from rest_framework.decorators import api_view
-from rest_framework.pagination import PageNumberPagination, LimitOffsetPagination, CursorPagination,BasePagination
+from rest_framework.pagination import PageNumberPagination, LimitOffsetPagination, CursorPagination
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.status import HTTP_201_CREATED, HTTP_400_BAD_REQUEST
@@ -13,6 +14,7 @@ from rest_framework.views import APIView
 
 from modellearn.models import Person
 from myapi.models import ProductApi, BookApi
+from .filters import ProductApiFilter
 from .serializers import ProductApiModelSerializer, ProductApiSerializer, BookSerializer
 
 
@@ -29,6 +31,8 @@ def product_list_create(request):
 class ProductApiListCreate(generics.ListCreateAPIView):
     queryset = ProductApi.objects.all()
     serializer_class = ProductApiModelSerializer
+    filter_backends = [DjangoFilterBackend]
+    filterset_class = ProductApiFilter
 
 
 class ProductApiUpdateView(generics.RetrieveUpdateDestroyAPIView):
@@ -121,6 +125,8 @@ class BookApiListCreateView(APIView):
 class BookApiListAuto(viewsets.ModelViewSet):
     queryset = BookApi.objects.all()
     serializer_class = BookSerializer
+    # filter_backends = [DjangoFilterBackend]
+    # filterset_class = ProductApiFilter
 
 
 def token_create_custom(request, id):
