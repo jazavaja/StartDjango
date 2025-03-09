@@ -6,6 +6,7 @@ from rest_framework import mixins
 from rest_framework import viewsets
 from rest_framework.authtoken.models import Token
 from rest_framework.decorators import api_view
+from rest_framework.filters import OrderingFilter
 from rest_framework.pagination import PageNumberPagination, LimitOffsetPagination, CursorPagination
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
@@ -31,8 +32,10 @@ def product_list_create(request):
 class ProductApiListCreate(generics.ListCreateAPIView):
     queryset = ProductApi.objects.all()
     serializer_class = ProductApiModelSerializer
-    filter_backends = [DjangoFilterBackend]
+    filter_backends = [DjangoFilterBackend, OrderingFilter]
     filterset_class = ProductApiFilter
+    ordering = ['name']
+    ordering_fields = '__all__'
 
 
 class ProductApiUpdateView(generics.RetrieveUpdateDestroyAPIView):
