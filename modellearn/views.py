@@ -63,7 +63,7 @@ def create_person(request):
         mobile = request.POST.get('mobile')
         password = request.POST.get('password')
         try:
-            Person.objects.create(
+            Person.objects.create_user(
                 first_name=first_name, last_name=last_name, age=age, email=email,
                 username=username, mobile=mobile, password=password
             )

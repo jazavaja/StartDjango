@@ -6,7 +6,7 @@ from rest_framework.throttling import BaseThrottle
 
 class CustomLimiterThrottler(BaseThrottle):
     def __init__(self):
-        self.rate = '2/minute'
+        self.rate = '100/minute'
         self.request = None
 
     def parse_rate(self, rate):
