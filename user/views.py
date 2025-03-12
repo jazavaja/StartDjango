@@ -21,6 +21,7 @@ def save_session(request):
     return HttpResponse('')
 
 
+
 def delete_session(request):
     if "username" in request.session:
         del request.session['username']

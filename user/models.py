@@ -1,3 +1,5 @@
+from PIL import Image
+from PIL.Image import Resampling
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractBaseUser
 from django.core.validators import EmailValidator
@@ -61,3 +63,20 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.user.username
+
+    def save(self, *args):
+        super().save(*args)
+
+        print('path_proFile', self.profile_picture.path)
+        if self.profile_picture:
+            print('HERE')
+            try:
+                img = Image.open(self.profile_picture.path)
+                size = (400, 300)
+                print(img.format)
+                resized_img = img.resize(size, Image.Resampling.BILINEAR)
+                resized_img.save(self.profile_picture.path, format=img.format, optimize=True)
+                # super().save(*args)
+            except Exception as e:
+                print(e)
+
