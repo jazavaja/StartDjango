@@ -40,5 +40,119 @@
     "path": "/store/update_product/7",
     "timestamp": "2025-03-12T14:21:35.014643",
     "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_category",
+    "timestamp": "2025-03-12T15:33:38.230280",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_category",
+    "timestamp": "2025-03-12T15:33:42.512594",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_category",
+    "timestamp": "2025-03-12T15:34:10.354977",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_category",
+    "timestamp": "2025-03-12T15:34:15.331975",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_category",
+    "timestamp": "2025-03-12T15:34:21.249687",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_category",
+    "timestamp": "2025-03-12T15:40:16.073751",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_category",
+    "timestamp": "2025-03-12T15:40:41.020211",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/favicon.ico",
+    "timestamp": "2025-03-12T15:40:42.152487",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_category",
+    "timestamp": "2025-03-12T15:41:37.474525",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_category",
+    "timestamp": "2025-03-12T15:44:30.661710",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/favicon.ico",
+    "timestamp": "2025-03-12T15:44:32.225218",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_category",
+    "timestamp": "2025-03-12T15:45:05.020118",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_category",
+    "timestamp": "2025-03-12T15:45:18.637218",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/favicon.ico",
+    "timestamp": "2025-03-12T15:45:19.778143",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_category",
+    "timestamp": "2025-03-12T15:46:29.318688",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_category",
+    "timestamp": "2025-03-12T15:46:45.839086",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/favicon.ico",
+    "timestamp": "2025-03-12T15:46:47.356456",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_category",
+    "timestamp": "2025-03-12T15:47:05.330102",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/favicon.ico",
+    "timestamp": "2025-03-12T15:47:06.379985",
+    "ip": "127.0.0.1"
   }
 ]
