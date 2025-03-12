@@ -1,0 +1,44 @@
+[
+  {
+    "method": "GET",
+    "path": "/",
+    "timestamp": "2025-03-12T14:20:36.665554",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/",
+    "timestamp": "2025-03-12T14:20:45.900570",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/",
+    "timestamp": "2025-03-12T14:21:08.718938",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_category",
+    "timestamp": "2025-03-12T14:21:22.016041",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_products",
+    "timestamp": "2025-03-12T14:21:29.899405",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/update_product/7",
+    "timestamp": "2025-03-12T14:21:33.279556",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "POST",
+    "path": "/store/update_product/7",
+    "timestamp": "2025-03-12T14:21:35.014643",
+    "ip": "127.0.0.1"
+  }
+]
