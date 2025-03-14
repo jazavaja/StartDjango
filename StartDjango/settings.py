@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 import os
 from datetime import timedelta
 from pathlib import Path
+from dotenv import load_dotenv
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'REMOVED_SECRET'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -114,16 +116,14 @@ SIMPLE_JWT = {
 
 SOCIALACCOUNT_AUTO_SIGNUP = True
 
+# Google OAuth Credentials
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
-        # For each OAuth based provider, either add a ``SocialApp``
-        # (``socialaccount`` app) containing the required client
-        # credentials, or list them here:
         'SCOPE': ['profile', 'email'],
         'AUTH_PARAMS': {'access_type': 'online'},
         'APP': {
-            'client_id': '113611205099-25gd3d1d21chqpov5bhkbbjj2rsl0h8a.apps.googleusercontent.com',
-            'secret': 'REMOVED_SECRET',
+            'client_id': os.getenv('GOOGLE_CLIENT_ID'),
+            'secret': os.getenv('GOOGLE_CLIENT_SECRET'),
             'key': ''
         }
     }
@@ -161,11 +161,12 @@ WSGI_APPLICATION = 'StartDjango.wsgi.application'
 
 # --------------------------------------------------------
 
+# Email Settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = "hasa@gmail.com"
-EMAIL_HOST_PASSWORD = "32323232"
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 
 # -----------------------
 STATIC_URL = '/static/'
@@ -187,10 +188,8 @@ SESSION_SAVE_EVERY_REQUEST = True
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-import os
-from dotenv import load_dotenv
 
-load_dotenv()
+
 
 DATABASES = {
     "default": {

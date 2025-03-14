@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f75822f0-459d-46e6-a5ca-f8630c13cc18" name="Changes" comment="8-3 Complete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StartDjango/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/StartDjango/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/middleware.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/request_logs.json" beforeDir="false" afterPath="$PROJECT_DIR$/request_logs.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,6 +159,8 @@
       <workItem from="1741690242123" duration="7001000" />
       <workItem from="1741715449032" duration="7756000" />
       <workItem from="1741772633028" duration="5777000" />
+      <workItem from="1741937685245" duration="1252000" />
+      <workItem from="1741967690626" duration="598000" />
     </task>
     <task id="LOCAL-00001" summary="Added 1">
       <option name="closed" value="true" />
