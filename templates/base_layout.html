@@ -37,7 +37,13 @@
         <div class="inner">
             <h3 class="masthead-brand">Cover</h3>
             <nav class="nav nav-masthead justify-content-center">
-                <a class="nav-link active" href="#">Home</a>
+                <form action="{% url 'set_language' %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="next" value="{{ request.get_full_path }}">
+                    <button type="submit" name="language" value="en-us" class="btn btn-danger">English</button>
+                    <button type="submit" name="language" value="fa" class="btn btn-info">Persian</button>
+                </form>
+                <a class="nav-link active" href="/">Home</a>
                 <a class="nav-link" href="{% url 'list_category' %}">Category</a>
                 <a class="nav-link" href="{% url 'list_products' %}">Products</a>
                 <a class="nav-link" href="{% url 'show_register_wf' %}">Register WF</a>

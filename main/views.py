@@ -1,13 +1,22 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 
 from main.forms import QuestionForm, AnswerForm
 from main.models import Question, Answer, Vote
 from main.tasks import hello_world
+from django.utils.translation import gettext_lazy , gettext as _
 
 
 # Create your views here.
+
+def persian_language(request):
+    hello = _('Hi')
+    return HttpResponse('Persian')
+
+def english_language(request):
+    return HttpResponse('English')
 
 def safe_asli_site(request):
     products = [

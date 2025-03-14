@@ -61,8 +61,8 @@ class BlockIpMiddleware:
         return block_list
 
     def __call__(self, request):
-        # my_ip = self.get_ip(request)
-        my_ip = '2.56.28.0'
+        my_ip = self.get_ip(request)
+        # my_ip = '2.56.28.0'
         url = f'https://ipinfo.io/{my_ip}?token=77ffa2ec464e8f'
         try:
             result = requests.get(url)

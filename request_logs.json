@@ -286,5 +286,515 @@
     "path": "/",
     "timestamp": "2025-03-14T21:01:35.718601",
     "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/",
+    "timestamp": "2025-03-14T22:36:05.316037",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/en-us/",
+    "timestamp": "2025-03-14T22:36:06.399235",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/en-us/",
+    "timestamp": "2025-03-14T22:37:20.556003",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/",
+    "timestamp": "2025-03-14T22:37:24.830463",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/en-us/",
+    "timestamp": "2025-03-14T22:37:25.468537",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/",
+    "timestamp": "2025-03-14T22:37:25.783375",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/en-us/",
+    "timestamp": "2025-03-14T22:37:26.348226",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/",
+    "timestamp": "2025-03-14T22:37:26.555243",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/en-us/",
+    "timestamp": "2025-03-14T22:37:27.217640",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/admin",
+    "timestamp": "2025-03-14T22:37:29.826182",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/",
+    "timestamp": "2025-03-14T22:37:30.351824",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/login/",
+    "timestamp": "2025-03-14T22:37:30.800369",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/en-us/",
+    "timestamp": "2025-03-14T22:37:46.085644",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/en-us/",
+    "timestamp": "2025-03-14T22:37:58.571106",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/fa",
+    "timestamp": "2025-03-14T22:38:22.382973",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/fa/",
+    "timestamp": "2025-03-14T22:38:22.858999",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/fa/",
+    "timestamp": "2025-03-14T22:38:26.475630",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/en",
+    "timestamp": "2025-03-14T22:38:35.777328",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/en-us",
+    "timestamp": "2025-03-14T22:38:47.019522",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/en-us/",
+    "timestamp": "2025-03-14T22:38:47.448078",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/en-us/",
+    "timestamp": "2025-03-14T22:40:35.401607",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/en-us/",
+    "timestamp": "2025-03-14T22:41:41.962602",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/fa/",
+    "timestamp": "2025-03-14T22:41:46.851896",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/fa/",
+    "timestamp": "2025-03-14T22:41:52.254037",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/en-us/",
+    "timestamp": "2025-03-14T22:41:56.594535",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/fa/",
+    "timestamp": "2025-03-14T22:42:28.860050",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/fa/",
+    "timestamp": "2025-03-14T22:43:37.899187",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/fa/",
+    "timestamp": "2025-03-14T22:44:18.655666",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/en/",
+    "timestamp": "2025-03-14T22:44:29.223595",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/en-us/",
+    "timestamp": "2025-03-14T22:44:35.116003",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/de",
+    "timestamp": "2025-03-14T22:45:35.982371",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/de/",
+    "timestamp": "2025-03-14T22:45:36.434583",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/ge/",
+    "timestamp": "2025-03-14T22:46:04.939630",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/",
+    "timestamp": "2025-03-14T22:46:16.141888",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/en-us/",
+    "timestamp": "2025-03-14T22:46:16.555143",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/fa/",
+    "timestamp": "2025-03-14T22:46:22.048687",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/fa/",
+    "timestamp": "2025-03-14T22:50:32.633668",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/fa/",
+    "timestamp": "2025-03-14T22:53:32.357108",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_products",
+    "timestamp": "2025-03-14T22:53:34.813836",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_category",
+    "timestamp": "2025-03-14T22:53:36.963384",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/",
+    "timestamp": "2025-03-14T22:53:40.445745",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/en-us/",
+    "timestamp": "2025-03-14T22:53:40.855599",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/en-us/",
+    "timestamp": "2025-03-14T23:01:42.592003",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "POST",
+    "path": "/i18nsetlang/",
+    "timestamp": "2025-03-14T23:01:44.751730",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/en/",
+    "timestamp": "2025-03-14T23:01:45.148193",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/en-us/",
+    "timestamp": "2025-03-14T23:02:01.827303",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "POST",
+    "path": "/i18nsetlang/",
+    "timestamp": "2025-03-14T23:02:03.496415",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/en-us/",
+    "timestamp": "2025-03-14T23:02:03.915073",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "POST",
+    "path": "/i18nsetlang/",
+    "timestamp": "2025-03-14T23:02:05.573022",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/fa/",
+    "timestamp": "2025-03-14T23:02:05.990098",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_category",
+    "timestamp": "2025-03-14T23:02:08.683302",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "POST",
+    "path": "/i18nsetlang/",
+    "timestamp": "2025-03-14T23:02:10.899225",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_category",
+    "timestamp": "2025-03-14T23:02:11.298810",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "POST",
+    "path": "/i18nsetlang/",
+    "timestamp": "2025-03-14T23:02:12.444709",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_category",
+    "timestamp": "2025-03-14T23:02:12.850774",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_category",
+    "timestamp": "2025-03-14T23:02:51.462441",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "POST",
+    "path": "/i18nsetlang/",
+    "timestamp": "2025-03-14T23:02:53.598090",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_category",
+    "timestamp": "2025-03-14T23:02:54.057037",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "POST",
+    "path": "/i18nsetlang/",
+    "timestamp": "2025-03-14T23:02:56.015186",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_category",
+    "timestamp": "2025-03-14T23:02:56.423979",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_category",
+    "timestamp": "2025-03-14T23:02:57.954066",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/",
+    "timestamp": "2025-03-14T23:02:59.121595",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/fa/",
+    "timestamp": "2025-03-14T23:02:59.497725",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_products",
+    "timestamp": "2025-03-14T23:03:02.130211",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "POST",
+    "path": "/i18nsetlang/",
+    "timestamp": "2025-03-14T23:03:03.386831",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_products",
+    "timestamp": "2025-03-14T23:03:03.793918",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/",
+    "timestamp": "2025-03-14T23:03:05.114730",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/fa/",
+    "timestamp": "2025-03-14T23:03:05.512868",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_products",
+    "timestamp": "2025-03-14T23:03:08.275989",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "POST",
+    "path": "/i18nsetlang/",
+    "timestamp": "2025-03-14T23:03:09.692840",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_products",
+    "timestamp": "2025-03-14T23:03:10.084967",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/",
+    "timestamp": "2025-03-14T23:03:11.814715",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/en-us/",
+    "timestamp": "2025-03-14T23:03:12.202533",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/en-us/",
+    "timestamp": "2025-03-14T23:05:06.483856",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/en-us/",
+    "timestamp": "2025-03-14T23:05:22.991682",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "POST",
+    "path": "/i18nsetlang/",
+    "timestamp": "2025-03-14T23:05:26.616986",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/fa/",
+    "timestamp": "2025-03-14T23:05:27.083756",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/fa/",
+    "timestamp": "2025-03-14T23:05:39.152630",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "POST",
+    "path": "/i18nsetlang/",
+    "timestamp": "2025-03-14T23:05:46.172774",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/fa/",
+    "timestamp": "2025-03-14T23:05:46.586584",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "POST",
+    "path": "/i18nsetlang/",
+    "timestamp": "2025-03-14T23:05:47.922156",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/en-us/",
+    "timestamp": "2025-03-14T23:05:48.332202",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/person/login",
+    "timestamp": "2025-03-14T23:05:50.816669",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/person/register",
+    "timestamp": "2025-03-14T23:05:53.683318",
+    "ip": "127.0.0.1"
+  },
+  {
+    "method": "GET",
+    "path": "/store/list_products",
+    "timestamp": "2025-03-14T23:05:54.540559",
+    "ip": "127.0.0.1"
   }
 ]

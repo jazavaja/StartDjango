@@ -1,22 +1,26 @@
 {% extends 'base_layout.html' %}
-
+{% load i18n %}
 {% block title %}
-    صفحه اصلی
+    {% trans "Main Page" %}
 {% endblock %}
 
 {% block main %}
     <h1 class="cover-heading">Main page</h1>
-    <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text,
-        and add your own fullscreen background photo to make it your own.</p>
     <p class="lead">
-        <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+        Cover is a one-page template for building simple and beautiful home pages. Download, edit the text,
+        and add your own fullscreen background photo to make it your own.
+    </p>
+    <p class="lead">
+        <a href="#" class="btn btn-lg btn-secondary">
+            {% trans "Learn more" %}
+        </a>
     </p>
     <p>
       {% load custom_tags %}
       {% custom_time "%Y %m %d" "===" "%H %M %S" %}
     </p>
     <p>
-    {% load custom_filter %}
-    {{ " JavadSarlak "|reverse_string }}
+{#    {% load custom_filter %}#}
+{#    {{ " JavadSarlak "|reverse_string }}#}
     </p>
 {% endblock %}

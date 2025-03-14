@@ -1,6 +1,7 @@
 from django.urls import path
 
-from .views import aboutus, safe_asli_site, submit_question, list_questions, submit_answer, plus_vote, mines_vote
+from .views import aboutus, safe_asli_site, submit_question, list_questions, submit_answer, plus_vote, mines_vote, \
+    persian_language, english_language
 
 urlpatterns = [
     path('', safe_asli_site, name='asli'),
