@@ -184,6 +184,17 @@ SESSION_SAVE_EVERY_REQUEST = True
 
 # ------------------------------
 
+CELERY_BROKER_URL = 'redis://localhost:6380/0'
+CELERY_RESULT_BACKEND = 'redis://localhost:6380/0'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'Asia/Tehran'
+
+
+
+
+#-----------------------------------
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases

@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 
 from main.forms import QuestionForm, AnswerForm
 from main.models import Question, Answer, Vote
+from main.tasks import hello_world
 
 
 # Create your views here.
@@ -14,6 +15,7 @@ def safe_asli_site(request):
         {'id': 2, 'name': 'Iphone 15 pro max ', 'price': 2000, 'quantity': 2, 'discount': '10 % '},
         {'id': 3, 'name': 'Xiaomi 17  ', 'price': 1000, 'quantity': 100, 'discount': '30 % '},
     ]
+    hello_world.delay()
     return render(request, 'index.html', {'products': products})
 
 
