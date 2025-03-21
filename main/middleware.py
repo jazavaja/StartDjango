@@ -30,15 +30,15 @@ class RequestLoggingMiddleware:
     def save_log(self, log_data):
         file_name = 'request_logs.json'
         logs = []
-        try:
-            with open(file_name, 'r', encoding='utf-8') as file:
-                logs = json.load(file)
-        except (FileNotFoundError, json.JSONDecodeError):
-            logs = []
-
-        logs.append(log_data)
-        with open(file_name, 'w', encoding='utf-8') as log_file:
-            json.dump(logs, log_file, indent=2)
+        # try:
+        #     with open(file_name, 'r', encoding='utf-8') as file:
+        #         logs = json.load(file)
+        # except (FileNotFoundError, json.JSONDecodeError):
+        #     logs = []
+        #
+        # logs.append(log_data)
+        # with open(file_name, 'w', encoding='utf-8') as log_file:
+        #     json.dump(logs, log_file, indent=2)
 
 
 class BlockIpMiddleware:

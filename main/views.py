@@ -13,7 +13,7 @@ from django.utils.translation import gettext_lazy , gettext as _
 
 def persian_language(request):
     hello = _('Hi')
-    return HttpResponse('Persian')
+    return HttpResponse(f'Persian{hello}')
 
 def english_language(request):
     return HttpResponse('English')

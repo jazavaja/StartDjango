@@ -242,7 +242,8 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'en-us'
 LANGUAGES = [
     ('en-us', 'English'),
-    ('fa', 'Persian')
+    ('fa', 'Persian'),
+    ('de','Germany')
 ]
 
 LOCALE_PATHS = [
