@@ -24,7 +24,7 @@ def safe_asli_site(request):
         {'id': 2, 'name': 'Iphone 15 pro max ', 'price': 2000, 'quantity': 2, 'discount': '10 % '},
         {'id': 3, 'name': 'Xiaomi 17  ', 'price': 1000, 'quantity': 100, 'discount': '30 % '},
     ]
-    hello_world.delay()
+    # hello_world.delay()
     return render(request, 'index.html', {'products': products})
 
 
