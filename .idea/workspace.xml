@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f75822f0-459d-46e6-a5ca-f8630c13cc18" name="Changes" comment="8-6 Complete">
+    <list default="true" id="f75822f0-459d-46e6-a5ca-f8630c13cc18" name="Changes" comment="8-8 notwork">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StartDjango/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/StartDjango/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,6 +165,7 @@
       <workItem from="1741967690626" duration="7700000" />
       <workItem from="1741978256246" duration="3831000" />
       <workItem from="1742026709926" duration="2311000" />
+      <workItem from="1742629363114" duration="3162000" />
     </task>
     <task id="LOCAL-00001" summary="Added 1">
       <option name="closed" value="true" />
@@ -486,7 +487,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741981106762</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="8-8 notwork">
+      <option name="closed" value="true" />
+      <created>1742589040678</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1742589040678</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -515,7 +524,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="4-11 -2  complete" />
     <MESSAGE value="5-2 complete" />
     <MESSAGE value="5-4 complete" />
     <MESSAGE value="5-5 complete" />
@@ -540,6 +548,7 @@
     <MESSAGE value="8-3 Complete" />
     <MESSAGE value="8-5 Complete" />
     <MESSAGE value="8-6 Complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="8-6 Complete" />
+    <MESSAGE value="8-8 notwork" />
+    <option name="LAST_COMMIT_MESSAGE" value="8-8 notwork" />
   </component>
 </project>
