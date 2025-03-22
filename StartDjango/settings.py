@@ -205,7 +205,15 @@ AWS_S3_REGION_NAME = 'ir-thr-at1'  # Example: 'us-east-1'
 AWS_S3_ENDPOINT_URL = 'https://s3.ir-thr-at1.arvanstorage.com'
 AWS_DEFAULT_ACL = 'public-read'
 AWS_QUERYSTRING_AUTH = False
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STORAGES = {
+    "default": {
+        "BACKEND": "storages.backends.s3.S3Storage",
+    },
+    "staticfiles":{
+        "BACKEND": "django.core.files.storage.FileSystemStorage"
+    }
+}
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 # from storages.backends.s3boto3 import S3Boto3Storage
 #
