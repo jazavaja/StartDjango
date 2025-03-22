@@ -177,7 +177,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-
 FILE_UPLOAD_MAX_MEMORY_SIZE = 1024 * 1024
 # -------------------------------
 
@@ -198,6 +197,14 @@ CELERY_TIMEZONE = 'Asia/Tehran'
 # -----------S3 Settings Start------------------------
 
 # AWS S3 configuration
+STORAGES = {
+    "default": {
+        "BACKEND": "storages.backends.s3.S3Storage",
+    },
+    "staticfiles": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage"
+    }
+}
 AWS_ACCESS_KEY_ID = 'f613a659-077a-4e1e-937a-352b485754fc'
 AWS_SECRET_ACCESS_KEY = '671a4a303d1158f08139bbb0ec3f27d73317bbe81bb59d013bb27301698fad03'
 AWS_STORAGE_BUCKET_NAME = 'djangolearning'
@@ -205,14 +212,6 @@ AWS_S3_REGION_NAME = 'ir-thr-at1'  # Example: 'us-east-1'
 AWS_S3_ENDPOINT_URL = 'https://s3.ir-thr-at1.arvanstorage.com'
 AWS_DEFAULT_ACL = 'public-read'
 AWS_QUERYSTRING_AUTH = False
-STORAGES = {
-    "default": {
-        "BACKEND": "storages.backends.s3.S3Storage",
-    },
-    "staticfiles":{
-        "BACKEND": "django.core.files.storage.FileSystemStorage"
-    }
-}
 # DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 # from storages.backends.s3boto3 import S3Boto3Storage
