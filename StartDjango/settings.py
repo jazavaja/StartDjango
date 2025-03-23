@@ -224,6 +224,19 @@ AWS_QUERYSTRING_AUTH = False
 
 # --------------S3 Settings End-----------------------
 
+# -------------------SSL Encrypt --------------------
+SECURE_SSL_REDIRECT = os.getenv('SECURE_SSL_REDIRECT',False)
+# ------------------- SSL Encrypt ------------------
+
+# Secure CSRF -------------
+
+CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_HTTPONLY = True
+
+# Secure CSRF -------------
+
+
+
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases

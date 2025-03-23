@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f75822f0-459d-46e6-a5ca-f8630c13cc18" name="Changes" comment="8-8 notwork">
+    <list default="true" id="f75822f0-459d-46e6-a5ca-f8630c13cc18" name="Changes" comment="8-8 after works!! ok with boto downgrade!!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StartDjango/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/StartDjango/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,6 +169,7 @@
       <workItem from="1741978256246" duration="3831000" />
       <workItem from="1742026709926" duration="2311000" />
       <workItem from="1742629363114" duration="3162000" />
+      <workItem from="1742661833128" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="Added 1">
       <option name="closed" value="true" />
@@ -500,7 +499,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742589040678</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="8-8 after works!! ok with boto downgrade!!">
+      <option name="closed" value="true" />
+      <created>1742638741382</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1742638741382</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -529,7 +536,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="5-2 complete" />
     <MESSAGE value="5-4 complete" />
     <MESSAGE value="5-5 complete" />
     <MESSAGE value="5-6 complete" />
@@ -554,6 +560,7 @@
     <MESSAGE value="8-5 Complete" />
     <MESSAGE value="8-6 Complete" />
     <MESSAGE value="8-8 notwork" />
-    <option name="LAST_COMMIT_MESSAGE" value="8-8 notwork" />
+    <MESSAGE value="8-8 after works!! ok with boto downgrade!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="8-8 after works!! ok with boto downgrade!!" />
   </component>
 </project>
