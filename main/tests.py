@@ -1,7 +1,7 @@
 from django.core.exceptions import ValidationError
 from django.db import IntegrityError
 from django.test import TestCase
-
+import pytest
 from modellearn.models import Person
 from .models import Question, Answer
 
@@ -71,3 +71,10 @@ class TestAnswer(TestCase):
             answer.save()
         print("Why IntegrityError Error :",contextError2.exception)
 
+
+@pytest.mark.django_db
+def test_product():
+    person = Person.objects.create(username="javad", email="job@jo.com")
+    assert person.username == "javad"
+    assert person.email == "job@jo.com"
+    pass
