@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f75822f0-459d-46e6-a5ca-f8630c13cc18" name="Changes" comment="8-8 after works!! ok with boto downgrade!!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/tests.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,6 +171,7 @@
       <workItem from="1742026709926" duration="2311000" />
       <workItem from="1742629363114" duration="3162000" />
       <workItem from="1742661833128" duration="599000" />
+      <workItem from="1742750387783" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="Added 1">
       <option name="closed" value="true" />

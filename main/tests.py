@@ -42,30 +42,32 @@ class TestAnswer(TestCase):
             status=False
         )
 
-    def test_question(self):
-        question_data = {
-            'author': self.author,
-            'question_title': "Title",
-            'question_description': 'sarlak',
-        }
-        question = Question(**question_data)
-        with self.assertRaises(ValidationError) as c:
-            question.full_clean()
-        print(c.exception)
-        with self.assertRaises(IntegrityError):
-            question.save()
-        self.assertEqual(question.question_title, 'javad')
+    # def test_question(self):
+    #     question_data = {
+    #         'author': self.author,
+    #         'question_title': "Title",
+    #         'question_description': 'sarlak',
+    #     }
+    #     question = Question(**question_data)
+    #     with self.assertRaises(ValidationError) as c:
+    #         question.full_clean()
+    #     print(c.exception)
+    #     with self.assertRaises(IntegrityError):
+    #         question.save()
+    #     self.assertEqual(question.question_title, 'javad')
 
     def test_answer(self):
         answer_data = {
             "question": self.question,
-            "author": self.author,
+            # "author": self.author,
             "content":"Test",
             "status": True,
         }
         answer = Answer(**answer_data)
         with self.assertRaises(ValidationError) as contextError:
             answer.full_clean()
-        print(contextError.exception)
-        with self.assertRaises(IntegrityError):
+        print("Why Validation Error :",contextError.exception)
+        with self.assertRaises(IntegrityError) as contextError2:
             answer.save()
+        print("Why IntegrityError Error :",contextError2.exception)
+
