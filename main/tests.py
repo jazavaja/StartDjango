@@ -1,8 +1,10 @@
+import pytest
 from django.core.exceptions import ValidationError
 from django.db import IntegrityError
 from django.test import TestCase
-import pytest
+
 from modellearn.models import Person
+from .forms import QuestionForm
 from .models import Question, Answer
 
 
@@ -60,16 +62,30 @@ class TestAnswer(TestCase):
         answer_data = {
             "question": self.question,
             # "author": self.author,
-            "content":"Test",
+            "content": "Test",
             "status": True,
         }
         answer = Answer(**answer_data)
         with self.assertRaises(ValidationError) as contextError:
             answer.full_clean()
-        print("Why Validation Error :",contextError.exception)
+        print("Why Validation Error :", contextError.exception)
         with self.assertRaises(IntegrityError) as contextError2:
             answer.save()
-        print("Why IntegrityError Error :",contextError2.exception)
+        print("Why IntegrityError Error :", contextError2.exception)
+
+
+class TestQuestionForm(TestCase):
+    def setUp(self) -> None:
+        pass
+
+    def test_question_form(self):
+        form_data = {
+            'question_description':'helloiiiiiiiiiiiiiiiiiiiiiiii'
+        }
+        forms = QuestionForm(data=form_data)
+        print(forms.errors)
+        self.assertTrue(forms.is_valid())
+
 
 
 @pytest.mark.django_db
