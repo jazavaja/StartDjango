@@ -39,6 +39,8 @@ LOGIN_REDIRECT_URL = 'profile'
 LOGIN_URL = '/person/login'
 
 INSTALLED_APPS = [
+    'chat',
+    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -162,8 +164,17 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 WSGI_APPLICATION = 'StartDjango.wsgi.application'
-
+ASGI_APPLICATION = 'StartDjango.asgi.application'
 # --------------------------------------------------------
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6380)],  # آدرس و پورت Redis
+        },
+    },
+}
+# ------------------------------------------------
 
 # Email Settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -225,13 +236,13 @@ AWS_QUERYSTRING_AUTH = False
 # --------------S3 Settings End-----------------------
 
 # -------------------SSL Encrypt --------------------
-SECURE_SSL_REDIRECT = os.getenv('SECURE_SSL_REDIRECT',False)
+SECURE_SSL_REDIRECT = False
 # ------------------- SSL Encrypt ------------------
 
 # Secure CSRF -------------
 
-CSRF_COOKIE_SECURE = True
-CSRF_COOKIE_HTTPONLY = True
+# CSRF_COOKIE_SECURE = True
+# CSRF_COOKIE_HTTPONLY = True
 
 # Secure CSRF -------------
 

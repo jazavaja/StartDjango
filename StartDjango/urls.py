@@ -26,6 +26,7 @@ urlpatterns = [
     path('user/', include('user.urls')),
     path('person/', include('modellearn.urls')),
     path('api/', include('myapi.urls')),
+    path('chat', include('chat.urls')),
 ]
 urlpatterns += i18n_patterns(
     path('', include('main.urls')),
