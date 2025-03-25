@@ -39,6 +39,7 @@ LOGIN_REDIRECT_URL = 'profile'
 LOGIN_URL = '/person/login'
 
 INSTALLED_APPS = [
+    'graphene_django',
     'chat',
     'channels',
     'django.contrib.admin',
@@ -78,6 +79,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "allauth.account.middleware.AccountMiddleware",
 ]
+
+GRAPHENE = {
+    "SCHEMA": "StartDjango.store.schema"
+}
+
 REST_FRAMEWORK = {
     'DEFAULT_THROTTLE_CLASSES': [
         # 'myapi.limiter.CustomLimiterThrottler',

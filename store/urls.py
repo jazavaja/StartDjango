@@ -1,5 +1,8 @@
 from django.urls import path
+from graphene_django.views import GraphQLView
 
+from StartDjango import settings
+from store.schema import schema
 from store.views import list_category_view, delete_category_view, update_category_view, \
     create_category_view, product_list_view, product_update_view, product_create_view, \
     product_delete_view, contact_view
@@ -17,4 +20,6 @@ urlpatterns = [
     path('create_product', product_create_view, name='create_product'),
     path('delete_product/<int:id>', product_delete_view, name='delete_product'),
     path('contact_form', contact_view, name='contact_view'),
+    path("graphql", GraphQLView.as_view(graphiql=settings.DEBUG, schema=schema)),
+
 ]
